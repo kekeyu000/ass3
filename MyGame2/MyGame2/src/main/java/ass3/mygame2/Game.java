@@ -131,7 +131,7 @@ public class Game {
     }
 
     private void printInventory() {
-        System.out.println(player.printAllInventory());
+        System.out.println(player.printAllInventory());//shows what player have in the inventory.
     }
 
     /**
