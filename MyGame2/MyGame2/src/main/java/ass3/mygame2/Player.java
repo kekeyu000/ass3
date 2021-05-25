@@ -38,6 +38,7 @@ public class Player
     public void removeItemInventory(Item item){
         playerItem.remove(item);
         System.out.println(item.getName() + " was removed from your inventory");// add extra information to inform user that the item has been dropped.
+        System.out.println(item.getName() + " was lefted in the room.");// add extra information to user regarding room.
     }
     
     public Item getPlayerItem(String stringItem){
