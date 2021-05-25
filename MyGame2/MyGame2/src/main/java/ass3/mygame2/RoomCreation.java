@@ -27,10 +27,16 @@ public class RoomCreation {
         castle.setExit("east", kitchen);
         castle.setExit("south", frontGate);
         frontGate.setExit("north", castle);
-
+        frontGate.setExit("east-north",kitchen);// add exit from frontGate to kitchen.
+        kitchen.setExit("west", castle);// add exit from kitchen to castle.
+        kitchen.setExit("west-south",frontGate);// add exit from kitchen to frontGate
+        
+        
         castle.addItemInRoom(itemCreation.getItem("excaliburSword"));
         castle.addItemInRoom(itemCreation.getItem("key"));
         kitchen.addItemInRoom(itemCreation.getItem("frontGateKey"));
+        kitchen.addItemInRoom(itemCreation.getItem("item2"));//add item2 in kitchen
+        frontGate.addItemInRoom(itemCreation.getItem("item1"));// add item1 in frontGate
 
         allRoomInGame.add(castle);
         allRoomInGame.add(frontGate);
